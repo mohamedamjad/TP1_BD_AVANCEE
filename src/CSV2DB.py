@@ -8,7 +8,7 @@ import csv
 
 # Database connection
 try:
-    conn = psycopg2.connect("dbname=test user=postgres host=localhost password=postgres")
+    conn = psycopg2.connect("dbname=mit user=mit15 host=localhost password=mit15")
     print('Database Connection ... OK')
 except:
     print ("Database Connection ... FAILED, please check database connection details")
@@ -26,12 +26,12 @@ cursor.execute("CREATE TABLE IF NOT EXISTS MIT_Zigbee(sender_id integer,local_id
 print('CREATE TABLES ... SUCCESS')
 
 # Read the IR CSV file
-with open('IR.csv') as csvfile:
+with open('../IR.csv') as csvfile:
     columnreader = csv.reader(csvfile, delimiter=',', quotechar="|")
     for row in columnreader:
         cursor.execute("INSERT INTO mit_ir (sender_id,local_id,data_time) VALUES("+row[0]+", "+row[1]+", '"+row[2]+"');")
 # Read the Zigbee CSV file
-with open('Zigbee.csv') as csvfile2:
+with open('../Zigbee.csv') as csvfile2:
     columnreader2 = csv.reader(csvfile2, delimiter=',', quotechar="|")
     for row2 in columnreader2:
         cursor.execute("INSERT INTO mit_zigbee (sender_id,local_id,rssi,data_time) VALUES("+row2[0]+", "+row2[1]+", "+row2[2]+", '"+row2[3]+"');")
