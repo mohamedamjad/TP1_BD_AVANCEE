@@ -11,3 +11,14 @@ Le second fichier zigbee contient les résultats des capteurs bluetooth. On retr
 sender_id,
 un date_time, un RSSI, qui correspond à une distance entre les deux personnes." ([Cliquez ici](http://cours-express.fr/cherche-cours-exercices/lire-sujet-cours.php?id_sujet_a_lire=233) pour plus d'informations sur le sujet proposé par Mr. Cyril Trambouz).
 Le but est de déterminer, à partir des positions relatives des personnes portant un badge, s'il y a eu discussion entre eux ou pas.
+
+### Dépendances logicielles:
+Ce programme est développé avec python. Il nécéssite, pour tourner, une multitude paquets complémentaires:
+- pymongo: gérer les interactions avec le serveurs MongoDB
+- psycopg2: gérer les interactions avec le serveur PostgreSQL
+- sys, os, pour l'interaction avec le système d'exploitation, en l'occurence Linux (testé sur la distribution Debian/Ubuntu).
+
+ Pour faciliter à l'utilisateur la tâche de l'installation de ces dépendances. J'ai préparé un script Bash (config_db.sh). Il suffit de le lancer en ligne de commande:
+```
+/bin/bash config_db.sh
+```
