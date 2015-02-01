@@ -1,6 +1,8 @@
 # TP1_BD_AVANCEE
 Rendu du TP1 du cours bases de données avancées. Le sujet est proposé par Mr. Cyril Trambouze intervenant dans l'élément BD avancée et Big Data à l'École Nationale des Sciences Géographiques.
 
+Ce rendu est sous licence GNU GPL 2.0. consultez le fichier LICENSE pour plus d'informations.
+
 ### Problématique:
 Nous disposons de deux jeux de données (IR.csv et Zigbee.csv).
 "Le premier fichier IR contient les résultats des capteurs infrarouges.
